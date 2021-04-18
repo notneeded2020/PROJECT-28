@@ -29,9 +29,9 @@ function setup() {
 	treeObj=new tree(1050,580);
 	groundObject=new ground(width/2,600,width,20);
 
-	stone = new Stone (235,415,30);
+	stoneObj = new Stone (235,415,30);
 
-	sling = new Sling (stone.body,{x:235,y:415})
+	sling = new Sling (stoneObj.body,{x:235,y:415})
 	
 	Engine.run(engine);
 
@@ -52,14 +52,14 @@ function draw() {
   mango4.display();
   mango5.display();
   mango6.display();
-  stone.display();
+  stoneObj.display();
   sling.display();
 
   groundObject.display();
 }
 
 function mouseDragged (){
-    Matter.Body.setPosition (stone.body,{x:mouseX,y:mouseY})
+    Matter.Body.setPosition (stoneObj.body,{x:mouseX,y:mouseY})
 }
 
 function mouseReleased() {
